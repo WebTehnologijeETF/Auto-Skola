@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body {
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #494949;
+    background-image: url(images/body-bg.jpg);
+    background-repeat: repeat-x;
+    background-color: cadetblue;
+}
+
+a {
+    color: #647B8C;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #93A985;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+h2 {
+    color: #93A985;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    padding: 0 0 5px;
+    margin: 0;
+    border-bottom: 1px solid #C8D1BA;
+}
+
+h3 {
+    color: #93A985;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.partneri h3 {
+    color: cadetblue;
+    font-size: 25px;
+    
+
+}
+
+h4 {
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: #999;
+}
+
+h5 {
+    padding-bottom: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+ul,
+ol {
+    margin: auto;
+    list-style-type: none;
+    
+}
+
+li ol,
+li ul {
+    font-size: 1.0em;
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+#menu {
+    background: #279;
+    width: 960px;
+    height: 40px;
+    margin-top: 0px;
+}
+
+#menu ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu ul li {
+    list-style: none;
+    float: left;
+    clear: none;
+    margin-left: 1px;
+    margin-top: 5px;
+}
+
+#menu ul li a {
+    display: block;
+    width: 125px;
+    height: 27px;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 4px;
+}
+
+#menu ul li a:hover,
+#menu ul li.active a {
+    text-decoration: underline;
+}
+
+#content {
+    background: #fff;
+    padding: 20px 0px 20px 0px;
+    width: 960px;
+    float: left;
+}
+
+#main {
+    float: left;
+    clear: none;
+    width: 605px;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+
+#content #sidebar {
+    float: left;
+    clear: none;
+    width: 280px;
+    margin: 0 15px 0 25px;
+    padding: 10px;
+    background-color: #F3F5F0;
+}
+
+#sidebar h4 {
+    border-bottom: 1px solid #C8D1BA;
+    color: #93A985;
+    font-size: 20px;
+}
+
+#bottom {
+    margin-top: 5px;
+    width: 605px;
+}
+
+.sub_title {
+    color: #93A985;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#divider {
+    background: #C8D1BA;
+    height: 1px;
+    margin-bottom: 15px;
+}
+
+#footer {
+    background: #fff;
+    font-size: 11px;
+    padding: 7px 15px 0px 15px;
+    margin-bottom: 40px;
+    color: #444;
+    text-align: center;
+    border-top: 1px solid #C8D1BA;
+}
+
+#footer a {
+    font-size: 11px;
+    color: #444;
+}
+
+.login {}
+
+.login-forma {
+    margin-left: 5px;
+}
+
+#loginButton {
+    margin-top: 5px;
+}
+
+.read_more {
+    border-radius: 10px;
+    background-color: floralwhite;
+    float: right;
+    padding: 7px;
+    color: blue;
+}
+
+.intro {
+    border-radius: 10px;
+    background-color: skyblue;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.intro h2 {
+    padding: 10px;
+    color: white;
+}
+
+.intro_aside {
+    padding: 10px;
+}
+
+.novosti .read_more {}
+
+.novosti {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.novosti .read_more {
+    border-radius: 10px;
+    background-color: floralwhite;
+    float: right;
+    padding: 7px;
+    color: blue;
+    margin-right: 10px;
+}
+
+.novosti h3 {
+    color: darkcyan;
+}
+
+#main .header {
+    color: cadetblue;
+}
+
+.vazno {
+    font-weight: bold;
+    font-size: 15px;
+    color: darkblue;
+}
+
+.datum_objave {
+    float: right;
+    padding: 5px;
+}
+
+.kontaktforma {
+    margin-left: 150px;
+    padding: 5px;
+}
+
+.input1 {
+    margin-top: 0px;
+}
+
+.informacije {
+    margin-left: 155px;
+}
+
+.informacije p {
+    margin-bottom: 0px;
+    color: black;
+}
+
+input {
+    border-radius: 5px;
+}
+
+textarea {
+    border-radius: 5px;
+}
+
+
+
+
+
+
+td {
+    text-align: center
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: solid 1px;
+    
+}
+
+td, tr, th{
+    border: solid 1px black;
+}
+
+
+
+#main_kalendar {
+    width: 700px;
+    margin: auto;
+    
+}
+
+.tabela {
+    margin-top: 20px;
+}
+
+.partneri {
+    float: left;
+    clear: none;
+    width: 280px;
+    margin: 0 10px 0 25px;
+    padding: 10px;
+    background-color: lavender;
+    margin-top: 20px;
+}
