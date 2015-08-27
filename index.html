@@ -19,22 +19,19 @@
         <div id="menu">
             <ul>
                 <li>
-                    <a href="index.html">Početna</a>
+                    <a onclick="fetchPage('index.html')">Početna</a>
                 </li>
                 <li>
-                    <a href="aboutUs.html">O nama</a>
+                    <a onclick="fetchPage('aboutUs.html')">O nama</a>
                 </li>
                 <li>
-                    <a href="kalendar.html">Kalendar</a>
+                    <a onclick="fetchPage('kalendar.html')">Kalendar</a>
                 </li>
                 <li>
-                    <a href="#">Obavještenja</a>
+                    <a onclick="fetchPage('novosti.html')">Novosti</a>
                 </li>
                 <li>
-                    <a href="novosti.html">Novosti</a>
-                </li>
-                <li>
-                    <a href="kontakt.html">Kontakt</a>
+                    <a onclick="fetchPage('kontakt.html')">Kontakt</a>
                 </li>
                 <li onmouseover="showMenu();" onmouseout="hideMenu();"><a>Uputstva</a>
                     <div id="drop_down">
@@ -57,7 +54,7 @@
                     <h2>Ko smo mi?</h2>
                     <p class="intro_aside">
                         Dobrodošli u Auto školu "Iris", jednu od vodećih firmi u regionu koje se bave obukom kandidata za upravljanje motornim vozilima...
-                        <input type="button" class="read_more" value="Pročitaj više" />
+                        <a href="aboutUs.html"><input type="button" class="read_more" value="Pročitaj više" /></a>
                     </p>
 
 
@@ -67,21 +64,17 @@
                     <h2>Šta nudimo?</h2>
                     <p class="intro_aside">
                         Auto škola "Iris" svojim kandidatima nudi vrhunsku obuku uz prijatnu atmosferu i moderno okruženje. Kandidati se osposobljavaju za...
-                        <input type="button" class="read_more" value="Pročitaj više" />
+                        <a href="aboutUs.html"><input type="button" class="read_more" value="Pročitaj više" /></a>
                     </p>
-
-
                 </div>
 
                 <div class="intro">
                     <h2>Zašto baš mi?</h2>
                     <p class="intro_aside">
                         Visoko stručni kadar i izuzetan kvalitet nastave čine našu firmu idealnom za sve one koji žele da na najbolji i najbrži način dođu do vozačke dozvole...
-                        <input type="button" class="read_more" value="Pročitaj više" />
+                       <a href="aboutUs.html"><input type="button" class="read_more" value="Pročitaj više" /></a>
                     </p>
-
                 </div>
-
 
                 <div id="bottom">
                     <div class="sub_title">Novosti</div>
@@ -91,7 +84,7 @@
                     <h3>Pomjeranje termina</h3>
                     <p>
                         Termin za polaganje teorijskog dijela vozačkog ispita zakazan za 20.03.2015. godine se pomjera za sedam dana...
-                        <input type="button" class="read_more" value="Saznaj više" />
+                        <input type="button" class="read_more" value="detaljnije" />
                     </p>
 
                 </div>
@@ -110,25 +103,22 @@
                             <input type="text" name="password" />
                             <br />
                             <input type="button" id="loginButton" name="login" value="Uloguj se" />
-
+                            <a href="registracija.html"><p>Nemaš nalog? Registruj se.</p></a>
 
                         </fieldset>
                     </form>
                 </div>
-
             </div>
             <div class="partneri">
                 <h3>Partneri</h3>
                 <ul>
-                    <li>
-                        <a>autoskola-xyz</a>
-                        <br />
-                        <a href="http://www.bihamk.ba/">Bihamk</a>
-                        <br />
-                        <a href="https://www.raiffeisenbank.ba/">Raiffeisen BANK Bosna i Hercegovina</a>
-                        <br />
-                        <a href="motobih.com">Moto BiH</a>
+                    <li><a href="https://www.raiffeisenbank.ba">
+                        <img alt="Raiffeisen banka" src="images/raiffeisen.jpg" height="30" width="90">
+                        </a>
                     </li>
+                    <li><a href="http://www.bihamk.ba">
+                    <img alt="Bihamk" src="images/bihamk.png" height="30" width="100" />
+                    </a></li>
                 </ul>
             </div>
             <div style="clear:both;"></div>
@@ -146,6 +136,7 @@
                 </p>
                 
                 <script src="showMenu.js"></script>
+                <script src="fetchPage.js"></script>
             </div>
 
         </div>
