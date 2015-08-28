@@ -425,7 +425,6 @@ td, tr, th {
 }
 
 .registracijaForma {
-    
     margin-top: 0px;
     padding: 5px;
     border: 1px solid #999;
@@ -445,6 +444,7 @@ td, tr, th {
 #mjestoError {
     visibility: hidden;
 }
+
 #opcinaError {
     visibility: hidden;
 }
@@ -453,3 +453,10 @@ td, tr, th {
     visibility: hidden;
 }
 
+#pregledPodataka {
+    
+    clear: none;
+    width: 605px;
+    margin: 0 auto;
+    padding: 0;
+}

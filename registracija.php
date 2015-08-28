@@ -1,3 +1,6 @@
+<?php
+ 
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -55,7 +58,7 @@
                     <div class="registracijaForma">
                         <form name="registracija" onsubmit="return validateRegistration()">
                             <p><span class="required">* </span>Ime:</p>
-                            <input type="text" id="ime" name="ime" class="input1" />
+                            <input type="text" id="ime" name="ime" class="input1"/>
                             <img src="images/error.jpg" id="imeError" />
                             <p><span class="required">* </span>Prezime:</p>
                             <input type="text" id="prezime" class="input1" />
