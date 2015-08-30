@@ -289,7 +289,7 @@ li ol, li ul {
 }
 
 .naslov_vijesti {
-    width: 50%;
+    width: 100%;
     float: left;
     margin-bottom: 20px;
 }
@@ -304,10 +304,15 @@ li ol, li ul {
     color: darkblue;
 }
 
-.datum_objave {
-    width: 50%;
+.slika {
     float: right;
-    text-align: right;
+    max-height: 100%;
+    max-width: 30%;
+}
+
+.datum_objave {
+    width: 100%;
+    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -328,6 +333,15 @@ li ol, li ul {
 .kontaktforma img {
     width: 20px;
     height: 20px;
+}
+
+#unosError{
+    visibility: hidden;
+}
+#captcha{
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
 }
 
 .input1 {
@@ -454,9 +468,17 @@ td, tr, th {
 }
 
 #pregledPodataka {
-    
     clear: none;
     width: 605px;
     margin: 0 auto;
     padding: 0;
+}
+
+#emailForma p {
+    padding: 0;
+    margin: 0;
+}
+#novostiPocetna{
+    height: 300px;
+    overflow-y: scroll;
 }

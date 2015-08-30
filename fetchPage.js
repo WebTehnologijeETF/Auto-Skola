@@ -7,7 +7,7 @@ function fetchPage(page)
         if (ajax.readyState == 4 && ajax.status == 200)
         {
           
-            document.getElementById("wrapper").innerHTML = ajax.responseText;
+            document.getElementById("content").innerHTML = ajax.responseText;
            
         }
     }

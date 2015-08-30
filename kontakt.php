@@ -1,8 +1,8 @@
 <?php
     
     
-      $ime = $prezime = $email = $broj = $poruka = "";
-      $imeErr = $prezimeErr = $emailErr = $brojErr = $porukaErr = "";
+      $ime = $prezime = $email = $broj = $poruka = $unos = "";
+      $imeErr = $prezimeErr = $emailErr = $brojErr = $porukaErr = $unosErr = "";
     
     
       if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -108,6 +108,26 @@
     
                $poruka = test_input($_POST["poruka"]);
           }
+          if(empty($_POST["unos"])){
+             $unosErr = '<style type="text/css">
+              #unosError {
+              visibility: visible;
+              }
+              </style>';  
+               $valid = 0; 
+          }
+          else{
+              $unos = test_input($_POST["unos"]);
+                if($unos != "gGphJD"){
+              $unosErr = '<style type="text/css">
+              #unosError {
+              visibility: visible;
+              }
+              </style>';  
+               $valid = 0; 
+                    }
+    
+          }
     
           }
     
@@ -158,25 +178,25 @@
             <div id="menu">
                 <ul>
                     <li>
-                        <a href="index.html">Početna</a>
+                        <a href="index.php">Početna</a>
                     </li>
                     <li>
-                        <a href="aboutUs.html">O nama</a>
+                        <a onclick="fetchPage('aboutUs.html')">O nama</a>
                     </li>
                     <li>
-                        <a href="kalendar.html">Kalendar</a>
+                        <a onclick="fetchPage('kalendar.html')">Kalendar</a>
                     </li>
                     <li>
-                        <a href="novosti.html">Novosti</a>
+                        <a onclick="fetchPage('novosti.php');">Novosti</a>
                     </li>
                     <li>
                         <a href="kontakt.php">Kontakt</a>
                     </li>
                     <li onmouseover="showMenu();" onmouseout="hideMenu();"><a>Uputstva</a>
                         <div id="drop_down">
-                            <a>Teorijski ispit</a>
-                            <a>Prakticni ispit</a>
-                            <a>Prva pomoc</a>
+                            <a onclick="fetchPage('teorija.html')">Teorijski ispit</a>
+                            <a onclick="fetchPage('prakticni.html')">Prakticni ispit</a>
+                            <a onclick="fetchPage('prvaPomoc.html')">Prva pomoc</a>
                         </div>
                     </li>
                 </ul>
@@ -233,7 +253,15 @@
                             <span><?php echo $porukaErr ?></span>
                             <img src="images/error.jpg" id="porukaError" />
                             <br />
-                            <input type="submit" value="Posalji" />
+                            <img src="images/captcha.jpg" id="captcha"><br />
+                            <p><span class="required">* </span>Unesite tekst sa slike:</p>
+                            <input type="text" id="unos" name="unos" class="input1" value="<?php
+                                        if(isset($_REQUEST['unos']))
+                                        print $_REQUEST['unos'];
+                                                     ?>">
+                            <span><?php echo $unosErr ?></span>
+                            <img src="images/error.jpg" id="unosError" /><br>
+                            <input type="submit" value="Posalji" onclick="validateForm();" />
                             <input type="reset" value="Poništi" />
                         </form>
                     </div>

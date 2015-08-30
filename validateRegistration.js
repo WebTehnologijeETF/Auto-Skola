@@ -86,11 +86,10 @@ function validateRegistration() {
         document.getElementById('mjestoError').style.visibility = 'hidden';
     }
     
-    if(ajaxValidacija(opcina.value,mjesto.value) == true)
-    {
-        alert("Uspješno ste se registrovali!");
-    }
-   
+     ajaxValidacija(opcina.value,mjesto.value);
+     
+     
+      
 }
 function mjestoEnable()
 {
@@ -112,8 +111,8 @@ function ajaxValidacija(opcina,mjesto)
     {
       if(ajax.readyState == 4 && ajax.status == 200)
       {
-         alert(ajax.responseText);
-         return true;
+         
+             document.getElementById('ajaxStatus').innerHTML = ajax.responseText;
       }
      
     }

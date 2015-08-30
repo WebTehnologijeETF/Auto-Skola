@@ -20,26 +20,26 @@
             <!-- menu -->
             <div id="menu">
                 <ul>
-                    <li>
-                        <a href="index.html">Početna</a>
+                   <li>
+                        <a href="index.php">Početna</a>
                     </li>
                     <li>
-                        <a href="aboutUs.html">O nama</a>
+                        <a onclick="fetchPage('aboutUs.html')">O nama</a>
                     </li>
                     <li>
-                        <a href="kalendar.html">Kalendar</a>
+                        <a onclick="fetchPage('kalendar.html')">Kalendar</a>
                     </li>
                     <li>
-                        <a href="novosti.html">Novosti</a>
+                        <a onclick="fetchPage('novosti.php');">Novosti</a>
                     </li>
                     <li>
-                        <a href="kontakt.html">Kontakt</a>
+                        <a href="kontakt.php">Kontakt</a>
                     </li>
                     <li onmouseover="showMenu();" onmouseout="hideMenu();"><a>Uputstva</a>
                         <div id="drop_down">
-                            <a>Teorijski ispit</a>
-                            <a>Prakticni ispit</a>
-                            <a>Prva pomoc</a>
+                            <a onclick="fetchPage('teorija.html')">Teorijski ispit</a>
+                            <a onclick="fetchPage('prakticni.html')">Prakticni ispit</a>
+                            <a onclick="fetchPage('prvaPomoc.html')">Prva pomoc</a>
                         </div>
                     </li>
                 </ul>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="registracijaForma">
-                        <form name="registracija" onsubmit="return validateRegistration()">
+                        <form name="registracija" >
                             <p><span class="required">* </span>Ime:</p>
                             <input type="text" id="ime" name="ime" class="input1"/>
                             <img src="images/error.jpg" id="imeError" />
@@ -78,8 +78,9 @@
                             <p><span class="required">* </span>Mjesto</p>
                             <input type="text" id="mjesto" class="input1" disabled>
                             <img src="images/error.jpg" id="mjestoError">
+                            <div id="ajaxStatus"></div>
                             <br /> <br />
-                            <input type="submit" value="Posalji" />
+                            <input type="button" value="Posalji" onclick="validateRegistration()" />
                             <input type="reset" value="Poništi" />
                         </form>
                     </div>
@@ -100,5 +101,6 @@
 
         <script src="showMenu.js" type="text/javascript"></script>
         <script src="validateRegistration.js" type="text/javascript"></script>
+         <script src="fetchPage.js" type="text/javascript"></script>
     </body>
 </html>
