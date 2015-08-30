@@ -16,23 +16,25 @@
         $mail->Password = 'AutoSkolaIris';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
+        $mail->addReplyTo($email, $ime);  
         $mail->From = 'auto_skola_iris@hotmail.com';
         $mail->FromName = 'Auto Skola IRIS';
-        $mail->addAddress('kmahmutovic@live.com', 'Kenan');    
-        $mail->addReplyTo($email, $ime);    
+        $mail->addAddress('auto_skola_iris@hotmail.com', 'Auto Skola IRIS');             
         $mail->WordWrap = 50;
         $mail->isHTML(false);    
         $mail->Subject = 'Poruka';
-        $mail->Body  = $poruka;
+        $mail->Body  = "Ime: ".$ime."\n"."Prezime: ".$prezime."\n"."Email: ".$email."\n"."Broj: ".$broj."\n"."Poruka: ".$poruka;
     
         if(!$mail->send()) {
            echo 'Nije moguće poslati poruku.';
-           echo 'Detaljnije o grešci: ' . $mail->ErrorInfo;
+           echo 'Detaljnije o grešci:' . $mail->ErrorInfo;
+           echo ' <br>';
+           echo '<a href="index.php">Povratak na početnu stranicu.</a>';
            exit;
         }
     
         echo 'Zahvaljujemo se što ste nas kontaktirali';
-    
+        echo '<a href="index.php">Povratak na početnu stranicu.</a>';
 ?>
 
 <!DOCTYPE html>

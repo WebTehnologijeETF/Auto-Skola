@@ -28,7 +28,7 @@
                                 $imaDetaljno = 0;
                                 for($i = 4; $i< count($sadrzaj); $i++){
                             
-                                    if($sadrzaj[$i] === "--\r\n"){
+                                    if($sadrzaj[$i] === "--\n"){
                                         $imaDetaljno = 1;
                                         continue;
                                     }
