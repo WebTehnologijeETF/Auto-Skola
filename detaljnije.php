@@ -1,24 +1,42 @@
 
 <?php
     
+          $id = $_REQUEST['id'];
     
-     $dateTime = $_GET['dateTime'];
-     $imeAutora = $_GET['autor'];
-     $naslovNovosti = $_GET['naslov'];
-     $slika = $_GET['slika'];
-     $opisNovosti = $_GET['opis'];
-     $detaljniOpisNovosti = $_GET['detaljno'];
-     $opis = $opisNovosti.$detaljniOpisNovosti;
-     
+          try {
+          $baza = new PDO("mysql:dbname=wtbaza;host=localhost;charset=utf8","wtuser","wtuser");
+          $naredba = $baza->prepare('select id,naslov,tekst,autor,slika,UNIX_TIMESTAMP(vrijeme) vrijeme1 from novosti where id=:id');
+          $naredba->execute(array('id' => $id));
+          $rezultat = $naredba->fetch();
+          
+          
+          //preuzimanje komentara
+
+          $komentari = $baza->query("select id, vijest,tekst, autor, UNIX_TIMESTAMP(vrijeme) vrijeme2, email from komentari where vijest = '$id'");
+          $brojKomentara = $komentari->rowCount();
+          }
+          catch(PDOException $e) {
+    
+              echo 'ERROR: ' . $e->getMessage();
+           }
     
     
+    
+                $dateTime = date("d.m.Y. H:i:s", $rezultat['vrijeme1']);
+                $id =  $rezultat['id'];
+                $imeAutora = trim($sadrzaj['autor']);
+                $naslovNovosti = trim(ucfirst(strtolower($rezultat['naslov'])));                               
+                $opisNovosti = trim($rezultat['tekst']);
+                $slika = $rezultat['slika'];
+                $detaljniOpisNovosti = "";
+                $detaljnije = "";
+                $indeks = strpos($opisNovosti, '--');                              
+                $pomocna = $opisNovosti;
+                $opisNovosti = substr($opisNovosti, 0 , $indeks);
+                $detaljniOpisNovosti = substr($pomocna, $indeks+2);
     
     echo '
-        <head>
-            <meta charset="utf-8" />
-            <title>Auto-Skola Iris</title>
-            <link href="style.css" media="screen" rel="stylesheet" />
-        </head>
+    
         <div id="main">
         <div class="novosti">
         <div class="novost">
@@ -30,12 +48,59 @@
                      <p>Datum objave:'.$dateTime.'</p>
                      </div>
                      <div class="tekst_novosti">
-                         <p><img alt="" src='.$slika.' class="slika" />'.$opis.'
+                         <p><img alt="" src='.$slika.' class="slika" />'.$opisNovosti.$detaljniOpisNovosti.'
                          </p>
                      </div>
+                     <div>
+                     <p>Broj komentara: '.$brojKomentara.'</p>
+                     <a id="komentarNaredba" onclick="prikaziKomentare();">Prikazi sve komentare</a>
+    
+                    </div>
+                    <div id = "komentari">';
+                     foreach($komentari as $komentar){
+                     $autor = $komentar['autor'];
+                     $vrijeme = date("d.m.Y. H:i:s", $komentar['vrijeme2']);
+                     $tekst = $komentar['tekst'];
+                     $email = $komentar['email'];
+    
+                     echo '
+                     <div class="komentar">
+                      <p class="imeKomentar">'.$autor.'</p>
+                      <p class="imeKomentar"><span class="ravnanjeDesno">'.$vrijeme.'</span></p>
+                      <p>'.$tekst.'</p>
+                      <a href="mailto:'.$email.'">'.$email.'</a>
+    
+                     </div>          
+    
+                     ';
+                     } 
+                     echo '
+                     </div>
                  </div>
+                 <input type="button" onclick="noviKomentar();" value="Komentarisi">
+    
+                 </div>
+    
+                 <div id="dodajKomentar">
+                 <form id="FdodajKomentar" name = "noviKomentarForma" method="POST" action="dodajKomentar.php">
+                 <p>Ime:</p>
+                 <input type="text" name="ime">
+                 <p>Komentar:</p>
+                 <input type="text" name="tekst">
+                 <p>Email:</p>
+                 <input type="text" name="email">
+                 <input type="hidden" value='.$id.' name="id">
+                 <input type ="submit"  value="Dodaj komentar">
+    
+                 </form>
+    
+    
                  </div>
                  </div> ';
+    
+    
+    
+    
     
 ?>
               

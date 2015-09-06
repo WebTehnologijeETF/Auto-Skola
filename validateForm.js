@@ -70,3 +70,56 @@ function validateForm() {
 
 
 }
+
+function validirajDodavanjeNovosti()
+{
+    var autor = document.dodajNovost.autor;
+    var naslov = document.dodajNovost.naslov;
+    var tekst = document.dodajNovost.tekst;
+
+    var valid = 1;
+    if(autor.value == "") valid = 0;
+    if(naslov.value == "") valid = 0;
+    if(tekst.value == "") valid = 0;
+
+    var x = document.getElementById('dodajNovost');
+    
+    if(!valid)
+    {
+        
+        alert("Provjerite jesu li sva polja popunjena");
+            }
+     else 
+     {
+        x.action = "adminPanel.php";
+        x.method = "POST";
+        x.submit();   
+     }
+}
+
+function validirajDodavanjeKorisnika()
+{
+    var username = document.dodajKorisnika.username;
+    var password = document.dodajKorisnika.password;
+    var email = document.dodajKorisnika.email;
+
+    var valid = 1;
+    if(username.value == "") valid = 0;
+    if(password.value == "") valid = 0;
+    if(email.value == "") valid = 0;
+
+    var x = document.getElementById('dodajKorisnika');
+    
+    if(!valid)
+    {
+        
+        alert("Provjerite jesu li sva polja popunjena");
+        return false;
+            }
+     else 
+     {
+        x.action = "adminPanel.php";
+        x.method = "POST";
+        x.submit();   
+     }
+}

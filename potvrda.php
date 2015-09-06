@@ -36,7 +36,7 @@
                         <a onclick="fetchPage('kalendar.html')">Kalendar</a>
                     </li>
                     <li>
-                        <a onclick="fetchPage('novosti.php');">Novosti</a>
+                        <a href="novosti.php">Novosti</a>
                     </li>
                     <li>
                         <a href="kontakt.php">Kontakt</a>
