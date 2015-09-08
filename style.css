@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
 body {
     background-color: #fff;
     padding: 0px;
@@ -12,78 +13,6 @@ body {
     background-image: url(images/body-bg.jpg);
     background-repeat: repeat-x;
     background-color: cadetblue;
-}
-.bold{
-    font-weight: bold;
-    text-decoration-color: #234e9c;
-}
-
-#loginForma{
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #49A3FF;
-    border-radius: 5px;
-}
-
-#loginForma #kontaktForma {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#loginForma #kontaktForma #dugme {
-   margin-top: 10px;
-   margin-bottom: 10px;
-}
-
-
-
-#komentari{
-    visibility: hidden;
-    height: 5px;
-    overflow-y: auto;
-}
-
-.komentar {
-    border-bottom: 1px solid #305c34;
-    background-color: #e8e8e8;
-}
-
-.komentar p {
-    margin: 0;
-}
-
-.prikazanKomentar{
-    visibility: visible;
-}
-
-#dodajKomentar{
-    visibility: hidden;
-}
-
-.sakrivenKomentar{
-    visibility: hidden;
-}
-
-.imeKomentar{
-    font-weight: bold;
-    color: blue;
-    
-}
-
-.ravnanjeDesno{
-    text-align: right;
-    
-    width: fill-available;
-}
-
-#seat {
-    float: right;
-}
-
-.required {
-    color: red;
 }
 
 a {
@@ -121,10 +50,11 @@ h3 {
     font-weight: normal;
     margin-bottom: 10px;
 }
-
 .partneri h3 {
     color: cadetblue;
     font-size: 25px;
+    
+
 }
 
 h4 {
@@ -139,12 +69,15 @@ h5 {
     color: #999;
 }
 
-ul, ol {
+ul,
+ol {
     margin: auto;
     list-style-type: none;
+    
 }
 
-li ol, li ul {
+li ol,
+li ul {
     font-size: 1.0em;
     margin-bottom: 0;
     padding-top: 5px;
@@ -163,40 +96,6 @@ li ol, li ul {
     margin-top: 0px;
 }
 
-#menu ul > li > ul > li {
-    display: block;
-    position: relative;
-    float: inherit;
-}
-
-#menu div a {
-    position: relative;
-    display: block;
-    margin: 0;
-    padding: 5px 10px;
-    width: auto;
-    white-space: nowrap;
-    text-align: left;
-    text-decoration: none;
-    background: #279;
-    color: #2875DE;
-    font: 11px arial;
-}
-
-#menu div a:hover {
-    background: #49A3FF;
-    color: #279;
-}
-
-
-
-#menu div {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    background: #279;
-}
-
 #menu ul {
     margin: 0px;
     padding: 0px;
@@ -210,7 +109,6 @@ li ol, li ul {
     margin-top: 5px;
 }
 
-
 #menu ul li a {
     display: block;
     width: 125px;
@@ -223,18 +121,9 @@ li ol, li ul {
     padding-top: 4px;
 }
 
-#menu ul li div a {
-    color: 
-}
-
-#menu ul li a:hover {
+#menu ul li a:hover,
+#menu ul li.active a {
     text-decoration: underline;
-    text-decoration-color: #49A3FF;
-}
-
-
-#menu ul li a:active{
-    background-color: red;
 }
 
 #content {
@@ -299,8 +188,7 @@ li ol, li ul {
     color: #444;
 }
 
-.login {
-}
+.login {}
 
 .login-forma {
     margin-left: 5px;
@@ -334,12 +222,7 @@ li ol, li ul {
     padding: 10px;
 }
 
-.novosti .read_more {
-}
-
-.novost {
-    border-bottom: 1px solid #3b8cab;
-}
+.novosti .read_more {}
 
 .novosti {
     padding: 10px;
@@ -358,22 +241,10 @@ li ol, li ul {
 
 .novosti h3 {
     color: darkcyan;
-    display: inline;
 }
 
 #main .header {
     color: cadetblue;
-}
-
-.naslov_vijesti {
-    width: 100%;
-    float: left;
-    margin-bottom: 20px;
-}
-
-.tekst_novosti {
-    width: 100%;
-    overflow-y: auto;
 }
 
 .vazno {
@@ -382,21 +253,9 @@ li ol, li ul {
     color: darkblue;
 }
 
-.slika {
-    float: right;
-    max-height: 100%;
-    max-width: 30%;
-}
-
 .datum_objave {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.datum_objave p {
-    margin: 0px;
-    margin-right: 15px;
+    float: right;
+    padding: 5px;
 }
 
 .kontaktforma {
@@ -404,26 +263,8 @@ li ol, li ul {
     padding: 5px;
 }
 
-.kontaktforma p {
-    margin-top: 0px;
-}
-
-.kontaktforma img {
-    width: 20px;
-    height: 20px;
-}
-
-#unosError{
-    visibility: hidden;
-}
-#captcha{
-    width: 200px;
-    height: 100px;
-    margin-top: 20px;
-}
-
 .input1 {
-    padding: 0px;
+    margin-top: 0px;
 }
 
 .informacije {
@@ -443,23 +284,32 @@ textarea {
     border-radius: 5px;
 }
 
+
+
+
+
+
 td {
-    text-align: center;
+    text-align: center
 }
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
     border: solid 1px;
+    
 }
 
-td, tr, th {
+td, tr, th{
     border: solid 1px black;
 }
+
+
 
 #main_kalendar {
     width: 700px;
     margin: auto;
+    
 }
 
 .tabela {
@@ -474,179 +324,4 @@ td, tr, th {
     padding: 10px;
     background-color: lavender;
     margin-top: 20px;
-}
-
-#imeError {
-    visibility: hidden;
-}
-
-#prezimeError {
-    visibility: hidden;
-}
-
-#emailError {
-    visibility: hidden;
-}
-
-#brojError {
-    visibility: hidden;
-}
-
-#porukaError {
-    visibility: hidden;
-}
-
-.sub_menu {
-    position: absolute;
-}
-
-
-#drop_down {
-    visibility: hidden;
-}
-
-#menu_lista ul li {
-    margin: 0px;
-}
-
-#menu_lista a {
-}
-
-#tabela {
-    width: 100%;
-}
-
-.registracijaForma {
-    margin-top: 0px;
-    padding: 5px;
-    border: 1px solid #999;
-    margin-left: 40%;
-}
-
-.login-forma p {
-    display: inline;
-    color: #112aeb;
-}
-
-.registracijaForma img {
-    width: 20px;
-    height: 20px;
-}
-
-#mjestoError {
-    visibility: hidden;
-}
-
-#opcinaError {
-    visibility: hidden;
-}
-
-#adresaError {
-    visibility: hidden;
-}
-
-#pregledPodataka {
-    clear: none;
-    width: 605px;
-    margin: 0 auto;
-    padding: 0;
-}
-
-#emailForma p {
-    padding: 0;
-    margin: 0;
-}
-#novostiPocetna{
-    height: 300px;
-    overflow-y: scroll;
-}
-
-#menu1 {
-    background: #999;
-    width: 960px;
-    height: 40px;
-    margin-top: 0px;
-}
-
-#menu1 ul > li > ul > li {
-    display: block;
-    position: relative;
-    float: inherit;
-}
-
-#menu1 div a {
-    position: relative;
-    display: block;
-    margin: 0;
-    padding: 5px 10px;
-    width: auto;
-    white-space: nowrap;
-    text-align: left;
-    text-decoration: none;
-    background: #279;
-    color: #2875DE;
-    font: 11px arial;
-}
-menu1 div a:link {
-    color: #2875DE ;
-}
-
-#menu1 div a:hover {
-    background: #49A3FF;
-    color: red;
-}
-
-#menu1 div a:active {
-    background: #99e656;
-}
-
-#menu1 div {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    background: #279;
-}
-
-#menu1 ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-#menu1 ul li {
-    list-style: none;
-    float: left;
-    clear: none;
-    margin-left: 1px;
-    margin-top: 5px;
-}
-
-#menu1 ul li a {
-    display: block;
-    width: 125px;
-    height: 27px;
-    text-decoration: none;
-    font-size: 13px;
-    cursor: pointer;
-    text-align: center;
-    color: #ffffff;
-    padding-top: 4px;
-}
-
-#menu1 ul li a:hover, #menu ul li.active a {
-    text-decoration: underline;
-}
-
-#forma {
-  margin-left: 30%;
-  margin-right: auto;
-  width: 600px;
-}
-
-.novostPanel{
-    
-   border-bottom: 1px solid black;
-}
-.novostPanel h5{
-    margin: 0;
-    
 }
