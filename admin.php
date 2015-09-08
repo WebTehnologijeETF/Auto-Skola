@@ -69,7 +69,7 @@
              $upit->execute(array('username'=>$username));
              $rezultat = $upit->fetch();
              if($rezultat['password'] !== $password){
-                echo '<p>Pogresno korisnicko ime ili lozinka. </p>';
+                echo '<p>Pogresno korisnicko ime ili lozinka. </p> ';
                 echo'<a href="">Zaboravio si sifru?</a>';
              }
              else{

@@ -69,14 +69,13 @@
                       <p class="imeKomentar"><span class="ravnanjeDesno">'.$vrijeme.'</span></p>
                       <p>'.$tekst.'</p>
                       <a href="mailto:'.$email.'">'.$email.'</a>
-    
-                     </div>          
+                       </div>          
     
                      ';
                      } 
                      echo '
-                     </div>
-                 </div>
+               </div>
+      </div>
                  <input type="button" onclick="noviKomentar();" value="Komentarisi">
     
                  </div>
@@ -96,7 +95,7 @@
     
     
                  </div>
-                 </div> ';
+    </div> ';
     
     
     
