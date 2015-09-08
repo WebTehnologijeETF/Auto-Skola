@@ -187,7 +187,7 @@
                         <a onclick="fetchPage('kalendar.html')">Kalendar</a>
                     </li>
                     <li>
-                        <a onclick="fetchPage('novosti.php');">Novosti</a>
+                         <a href="novosti.php">Novosti</a>
                     </li>
                     <li>
                         <a href="kontakt.php">Kontakt</a>
@@ -198,6 +198,9 @@
                             <a onclick="fetchPage('prakticni.html')">Prakticni ispit</a>
                             <a onclick="fetchPage('prvaPomoc.html')">Prva pomoc</a>
                         </div>
+                    </li>
+                     <li>
+                        <a href="admin.php">Admin Panel</a>
                     </li>
                 </ul>
             </div>
@@ -285,6 +288,7 @@
         <script src="validateForm.js" type="text/javascript"></script>
         <script src="showMenu.js" type="text/javascript"></script>
         <script src="fetchPage.js" type="text/javascript"></script>
+        <script src="prikaziKomentare.js" type="text/javascript"></script>
     </body>
 
 </html>

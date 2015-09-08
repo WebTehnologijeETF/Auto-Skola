@@ -13,6 +13,70 @@ body {
     background-repeat: repeat-x;
     background-color: cadetblue;
 }
+.bold{
+    font-weight: bold;
+    text-decoration-color: #234e9c;
+}
+
+#loginForma{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #49A3FF;
+    border-radius: 5px;
+}
+
+#loginForma #kontaktForma {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loginForma #kontaktForma #dugme {
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+
+
+#komentari{
+    visibility: hidden;
+    height: 5px;
+    overflow-y: auto;
+}
+
+.komentar {
+    border-bottom: 1px solid #305c34;
+    background-color: #e8e8e8;
+}
+
+.komentar p {
+    margin: 0;
+}
+
+.prikazanKomentar{
+    visibility: visible;
+}
+
+#dodajKomentar{
+    visibility: hidden;
+}
+
+.sakrivenKomentar{
+    visibility: hidden;
+}
+
+.imeKomentar{
+    font-weight: bold;
+    color: blue;
+    
+}
+
+.ravnanjeDesno{
+    text-align: right;
+    
+    width: fill-available;
+}
 
 #seat {
     float: right;
@@ -124,6 +188,8 @@ li ol, li ul {
     color: #279;
 }
 
+
+
 #menu div {
     position: absolute;
     margin: 0;
@@ -144,6 +210,7 @@ li ol, li ul {
     margin-top: 5px;
 }
 
+
 #menu ul li a {
     display: block;
     width: 125px;
@@ -156,8 +223,18 @@ li ol, li ul {
     padding-top: 4px;
 }
 
-#menu ul li a:hover, #menu ul li.active a {
+#menu ul li div a {
+    color: 
+}
+
+#menu ul li a:hover {
     text-decoration: underline;
+    text-decoration-color: #49A3FF;
+}
+
+
+#menu ul li a:active{
+    background-color: red;
 }
 
 #content {
@@ -296,6 +373,7 @@ li ol, li ul {
 
 .tekst_novosti {
     width: 100%;
+    overflow-y: auto;
 }
 
 .vazno {
@@ -481,4 +559,94 @@ td, tr, th {
 #novostiPocetna{
     height: 300px;
     overflow-y: scroll;
+}
+
+#menu1 {
+    background: #999;
+    width: 960px;
+    height: 40px;
+    margin-top: 0px;
+}
+
+#menu1 ul > li > ul > li {
+    display: block;
+    position: relative;
+    float: inherit;
+}
+
+#menu1 div a {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+    width: auto;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+    background: #279;
+    color: #2875DE;
+    font: 11px arial;
+}
+menu1 div a:link {
+    color: #2875DE ;
+}
+
+#menu1 div a:hover {
+    background: #49A3FF;
+    color: red;
+}
+
+#menu1 div a:active {
+    background: #99e656;
+}
+
+#menu1 div {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background: #279;
+}
+
+#menu1 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu1 ul li {
+    list-style: none;
+    float: left;
+    clear: none;
+    margin-left: 1px;
+    margin-top: 5px;
+}
+
+#menu1 ul li a {
+    display: block;
+    width: 125px;
+    height: 27px;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 4px;
+}
+
+#menu1 ul li a:hover, #menu ul li.active a {
+    text-decoration: underline;
+}
+
+#forma {
+  margin-left: 30%;
+  margin-right: auto;
+  width: 600px;
+}
+
+.novostPanel{
+    
+   border-bottom: 1px solid black;
+}
+.novostPanel h5{
+    margin: 0;
+    
 }
