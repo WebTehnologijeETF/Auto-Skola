@@ -3,7 +3,7 @@
     $loggedUser = "Anonimus";
     if(isset($_SESSION['username'])){
         $loggedUser = $_SESSION['username'];
-        
+    
     }
     
     
@@ -38,10 +38,10 @@
                         <a onclick="fetchPage('kalendar.html')">Kalendar</a>
                     </li>
                     <li>
-                        <a href="novosti.php">Novosti</a>
+                        <a onclick="fetchPage('novosti.html'); dobaviNovosti();">Novosti</a>
                     </li>
                     <li>
-                        <a href="kontakt.php">Kontakt</a>
+                        <a onclick="fetchPage('kontakt.html')">Kontakt</a>
                     </li>
 
                     <li onmouseover="showMenu();" onmouseout="hideMenu();"><a>Uputstva</a>
@@ -97,67 +97,67 @@
                     <div id="novostiPocetna">
                         <div class="novosti">
                             <?php
-                                 $baza = new PDO("mysql:dbname=wtbaza;host=localhost;charset=utf8","wtuser","wtuser");
-                            
-                            $baza->exec("set names utf8");
-                            $rezultat = $baza->query("select id,naslov,tekst,autor,slika,UNIX_TIMESTAMP(vrijeme) vrijeme1 from novosti order by vrijeme1");
-                            
-                            if(!$rezultat){
-                                $greska = $veza->errorInfo();
-                                print "SQL greska:".$greska[2];
-                                exit();
-                            }
-                            
-                            
-                            foreach($rezultat as $temp){                            
-                                $imaDetaljno = 0;
-                                $sadrzaj = $temp;
-                                $dateTime = date("d.m.Y. H:i:s", $sadrzaj['vrijeme1']);
-                                $id =  $sadrzaj['id'];
-                                $imeAutora = trim($sadrzaj['autor']);
-                                $naslovNovosti = trim(ucfirst(strtolower($sadrzaj['naslov'])));                               
-                                $opisNovosti = trim($sadrzaj['tekst']);
-                                $slika = $sadrzaj['slika'];
-                                $detaljniOpisNovosti = "";
-                                $detaljnije = "";
-                            
-                                $indeks = strpos($opisNovosti, '--');
-                                if($indeks !== FALSE){
-                                    $imaDetaljno = 1;
-                                    $pomocna = $opisNovosti;
-                                    $opisNovosti = substr($opisNovosti, 0 , $indeks);
-                                    $detaljniOpisNovosti = substr($pomocna, $indeks);
-                                }
-                            
-                               
-                                 $detaljnije = "<input type='button' value='Idi na vijest' onclick=\"fetchPage('detaljnije.php?id=$id');\">";
-                            
+                                     $baza = new PDO("mysql:dbname=wtbaza;host=localhost;charset=utf8","wtuser","wtuser");
                                 
-                                //dobijanje broja komentara 
-                                $komentari = $baza->query("select id, vijest,tekst, autor, UNIX_TIMESTAMP(vrijeme) vrijeme2, email from komentari where vijest = '$id'");
-                                $brojKomentara = $komentari->rowCount();
-                            
-                               echo ' <div class="novost">
-                                    <div class="naslov_vijesti">
-                                        <h3>'.$naslovNovosti.'</h3>
-                                    </div>
-                                    <div class="datum_objave">
-                                    <p>Autor: '.$imeAutora.'</p>
-                                    <p>Datum objave: '.$dateTime.'</p>
-                                    </div>
-                                    <div class="tekst_novosti">
-                                        <p><img alt="" src='.$slika.' class="slika" />'.$opisNovosti.'
-                                        </p>
-                                    </div>
-                                    <p>Broj komentara:'.$brojKomentara.'</p>
-                                    <div class="detaljnije">'.$detaljnije.'</div>
-                                </div> ';  
-                             }
+                                $baza->exec("set names utf8");
+                                $rezultat = $baza->query("select id,naslov,tekst,autor,slika,UNIX_TIMESTAMP(vrijeme) vrijeme1 from novosti order by vrijeme1");
+                                
+                                if(!$rezultat){
+                                    $greska = $veza->errorInfo();
+                                    print "SQL greska:".$greska[2];
+                                    exit();
+                                }
+                                
+                                
+                                foreach($rezultat as $temp){                            
+                                    $imaDetaljno = 0;
+                                    $sadrzaj = $temp;
+                                    $dateTime = date("d.m.Y. H:i:s", $sadrzaj['vrijeme1']);
+                                    $id =  $sadrzaj['id'];
+                                    $imeAutora = trim($sadrzaj['autor']);
+                                    $naslovNovosti = trim(ucfirst(strtolower($sadrzaj['naslov'])));                               
+                                    $opisNovosti = trim($sadrzaj['tekst']);
+                                    $slika = $sadrzaj['slika'];
+                                    $detaljniOpisNovosti = "";
+                                    $detaljnije = "";
+                                
+                                    $indeks = strpos($opisNovosti, '--');
+                                    if($indeks !== FALSE){
+                                        $imaDetaljno = 1;
+                                        $pomocna = $opisNovosti;
+                                        $opisNovosti = substr($opisNovosti, 0 , $indeks);
+                                        $detaljniOpisNovosti = substr($pomocna, $indeks);
+                                    }
+                                
+                                
+                                     $detaljnije = "<input type='button' value='Idi na vijest' onclick=\"fetchPage('detaljnije.php?id=$id');\">";
+                                
+                                
+                                    //dobijanje broja komentara 
+                                    $komentari = $baza->query("select id, vijest,tekst, autor, UNIX_TIMESTAMP(vrijeme) vrijeme2, email from komentari where vijest = '$id'");
+                                    $brojKomentara = $komentari->rowCount();
+                                
+                                   echo ' <div class="novost">
+                                        <div class="naslov_vijesti">
+                                            <h3>'.$naslovNovosti.'</h3>
+                                        </div>
+                                        <div class="datum_objave">
+                                        <p>Autor: '.$imeAutora.'</p>
+                                        <p>Datum objave: '.$dateTime.'</p>
+                                        </div>
+                                        <div class="tekst_novosti">
+                                            <p><img alt="" src='.$slika.' class="slika" />'.$opisNovosti.'
+                                            </p>
+                                        </div>
+                                        <p>Broj komentara:'.$brojKomentara.'</p>
+                                        <div class="detaljnije">'.$detaljnije.'</div>
+                                    </div> ';  
+                                 }
                             ?>
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="sidebar">
                     Prijavljeni ste kao <span class="bold"><?php echo $loggedUser; ?></span>  <a href="odjava.php">Odjavi se</a>
                     <h4>Uloguj se</h4>
@@ -204,9 +204,15 @@
                         </a>
                     </p>
 
-                    <script src="showMenu.js"></script>
-                    <script src="fetchPage.js"></script>
-                    <script src="prikaziKomentare.js"></script>
+                                        
+                    <script src="validateForm.js" type="text/javascript"></script>
+                    <script src="showMenu.js" type="text/javascript"></script>
+                    <script src="fetchPage.js" type="text/javascript"></script>
+                    <script src="prikaziKomentare.js" type="text/javascript"></script>
+                    <script src="ServisValidacijaKontakta.js" type="text/javascript"></script>
+                    <script src="potvrda.js" type="text/javascript"></script>
+                    <script src="novosti.js" type="text/javascript"></script>
+
                 </div>
 
             </div>

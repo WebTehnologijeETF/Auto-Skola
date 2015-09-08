@@ -69,7 +69,7 @@
              $upit->execute(array('username'=>$username));
              $rezultat = $upit->fetch();
              if($rezultat['password'] !== $password){
-                echo '<p>Pogresno korisnicko ime ili lozinka. </p>';
+                echo '<p>Pogresno korisnicko ime ili lozinka. </p> ';
                 echo'<a href="">Zaboravio si sifru?</a>';
              }
              else{
@@ -105,9 +105,13 @@
                         </a>
                     </p>
 
-                    <script src="showMenu.js"></script>
-                    <script src="fetchPage.js"></script>
-                    <script src="prikaziKomentare.js"></script>
+                     <script src="validateForm.js" type="text/javascript"></script>
+                    <script src="showMenu.js" type="text/javascript"></script>
+                    <script src="fetchPage.js" type="text/javascript"></script>
+                    <script src="prikaziKomentare.js" type="text/javascript"></script>
+                    <script src="ServisValidacijaKontakta.js" type="text/javascript"></script>
+                    <script src="potvrda.js" type="text/javascript"></script>
+                    <script src="novosti.js" type="text/javascript"></script>
                 </div>
 
             </div>

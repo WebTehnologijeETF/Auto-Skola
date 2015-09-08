@@ -1,0 +1,34 @@
+<div id="main">
+
+    <div id="pregledPodataka">
+        <form id="emailForma" method="POST" action="slanjeMaila.php">
+            <h3>Provjerite da li ste ispravno popunili kontakt formu</h3>
+            <p id="imeConfirm">Ime: </p><br>
+            <p id="prezimeConfirm">Prezime: </p><br>
+            <p id="emailConfirm">Email: </p><br>
+            <p id="brojConfirm">Broj: </p><br>
+            <p id="porukaConfirm">Poruka: </p><br>
+            <h3>Da li ste sigurni da želite poslati ove podatke?</h3>
+            <input type="button" value="Siguran sam" onclick="var e = document.getElementById('editForma'); e.method='POST'; e.action='sendGridPhp.php'; e.submit();">
+        </form>
+    </div>
+
+    <div class="kontaktforma">
+        <h3>Ako ste pogrešno popunili formu, možete ispod prepraviti unesene podatke</h3>
+        <form name="kontaktforma" id="editForma">
+            <p><span class="required">* </span>Ime:</p>
+            <input type="text" id="ime" name="ime" class="input1">
+            <p><span class="required">* </span>Prezime:</p>
+            <input type="text" id="prezime" name="prezime" class="input1">
+            <p><span class="required">* </span>E-mail:</p>
+            <input type="text" id="email" name="email" class="input1">
+            <p>Broj telefona:</p>
+            <input type="text" id="broj" name="broj" class="input1">
+            <p><span class="required">* </span>Poruka:</p>
+            <textarea rows="4" id="poruka" cols="50" name="poruka" class="input1"></textarea>
+            <br />
+            <input type="button" value="Posalji" onclick=" return updateFormu();" />
+            <input type="reset" value="Poništi" />
+        </form>
+    </div>
+</div>

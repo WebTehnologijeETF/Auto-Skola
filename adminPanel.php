@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: admin.php");
+    
+    }    
+    
     
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_REQUEST['dodajNovost'])){
     
@@ -17,13 +23,7 @@
              echo "<script type='text/javascript'>alert('Uspjesno ste dodali novost!');</script>";
     
          }
-         }
-    
-    
-    
-    
-    
-    
+         } 
     }
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_REQUEST['dodajKorisnika'])){
     
@@ -43,13 +43,7 @@
     
          }
          }
-    
-    
-    
-    
-    
-    
-    }
+        }
     
 ?>
 
@@ -83,10 +77,10 @@
                         <a onclick="fetchPage('kalendar.html')">Kalendar</a>
                     </li>
                     <li>
-                        <a href="novosti.php">Novosti</a>
+                        <a onclick="fetchPage('novosti.html'); dobaviNovosti();">Novosti</a>
                     </li>
                     <li>
-                        <a href="kontakt.php">Kontakt</a>
+                        <a onclick="fetchPage('kontakt.html')">Kontakt</a>
                     </li>
 
                     <li onmouseover="showMenu();" onmouseout="hideMenu();"><a>Uputstva</a>
@@ -116,7 +110,7 @@
                     <li>
                         <a onclick="fetchPage('promijeniKorisnika.php')">Uredi korisinka</a>
                     </li>
-                    
+
                 </ul>
 
             </div>
@@ -139,10 +133,13 @@
                         </a>
                     </p>
 
-                    <script src="showMenu.js"></script>
-                    <script src="fetchPage.js"></script>
-                    <script src="prikaziKomentare.js"></script>
-                    <script src="validateForm.js"></script>
+                     <script src="validateForm.js" type="text/javascript"></script>
+                    <script src="showMenu.js" type="text/javascript"></script>
+                    <script src="fetchPage.js" type="text/javascript"></script>
+                    <script src="prikaziKomentare.js" type="text/javascript"></script>
+                    <script src="ServisValidacijaKontakta.js" type="text/javascript"></script>
+                    <script src="potvrda.js" type="text/javascript"></script>
+                    <script src="novosti.js" type="text/javascript"></script>
                 </div>
 
             </div>

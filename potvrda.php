@@ -61,7 +61,7 @@
                     <p>Broj: <?php echo $broj?></p><br>
                     <p>Poruka: <?php echo $poruka?></p><br>
                     <h3>Da li ste sigurni da želite poslati ove podatke?</h3>
-                    <input type="button" value="Siguran sam" onclick="var e = document.getElementById('editForma'); e.action='slanjeMaila.php'; e.submit();">
+                    <input type="button" value="Siguran sam" onclick="var e = document.getElementById('editForma'); e.action='sendGridPhp.php'; e.submit();">
                 </form>
             </div>
             <div class="kontaktforma">
