@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
 body {
     background-color: #fff;
     padding: 0px;
@@ -50,11 +49,10 @@ h3 {
     font-weight: normal;
     margin-bottom: 10px;
 }
+
 .partneri h3 {
     color: cadetblue;
     font-size: 25px;
-    
-
 }
 
 h4 {
@@ -73,7 +71,6 @@ ul,
 ol {
     margin: auto;
     list-style-type: none;
-    
 }
 
 li ol,
@@ -96,11 +93,44 @@ li ul {
     margin-top: 0px;
 }
 
+#menu ul> li> ul> li {
+    display: block;
+    position: relative;
+    float: inherit;
+}
+
+#menu div a {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+    width: auto;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+    background: #279;
+    color: #2875DE;
+    font: 11px arial;
+}
+
+#menu div a:hover {
+    background: #49A3FF;
+    color: #279
+}
+
+#menu div {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background: #279;
+    
+  
+}
+
 #menu ul {
     margin: 0px;
     padding: 0px;
 }
-
 #menu ul li {
     list-style: none;
     float: left;
@@ -108,7 +138,6 @@ li ul {
     margin-left: 1px;
     margin-top: 5px;
 }
-
 #menu ul li a {
     display: block;
     width: 125px;
@@ -120,19 +149,16 @@ li ul {
     color: #ffffff;
     padding-top: 4px;
 }
-
 #menu ul li a:hover,
 #menu ul li.active a {
     text-decoration: underline;
 }
-
 #content {
     background: #fff;
     padding: 20px 0px 20px 0px;
     width: 960px;
     float: left;
 }
-
 #main {
     float: left;
     clear: none;
@@ -140,7 +166,6 @@ li ul {
     margin: 0 0 0 15px;
     padding: 0;
 }
-
 #content #sidebar {
     float: left;
     clear: none;
@@ -149,30 +174,25 @@ li ul {
     padding: 10px;
     background-color: #F3F5F0;
 }
-
 #sidebar h4 {
     border-bottom: 1px solid #C8D1BA;
     color: #93A985;
     font-size: 20px;
 }
-
 #bottom {
     margin-top: 5px;
     width: 605px;
 }
-
 .sub_title {
     color: #93A985;
     font-size: 20px;
     font-weight: bold;
 }
-
 #divider {
     background: #C8D1BA;
     height: 1px;
     margin-bottom: 15px;
 }
-
 #footer {
     background: #fff;
     font-size: 11px;
@@ -182,22 +202,17 @@ li ul {
     text-align: center;
     border-top: 1px solid #C8D1BA;
 }
-
 #footer a {
     font-size: 11px;
     color: #444;
 }
-
 .login {}
-
 .login-forma {
     margin-left: 5px;
 }
-
 #loginButton {
     margin-top: 5px;
 }
-
 .read_more {
     border-radius: 10px;
     background-color: floralwhite;
@@ -205,31 +220,25 @@ li ul {
     padding: 7px;
     color: blue;
 }
-
 .intro {
     border-radius: 10px;
     background-color: skyblue;
     padding: 10px;
     margin-top: 10px;
 }
-
 .intro h2 {
     padding: 10px;
     color: white;
 }
-
 .intro_aside {
     padding: 10px;
 }
-
 .novosti .read_more {}
-
 .novosti {
     padding: 10px;
     border-radius: 10px;
     background-color: lightgray;
 }
-
 .novosti .read_more {
     border-radius: 10px;
     background-color: floralwhite;
@@ -238,84 +247,68 @@ li ul {
     color: blue;
     margin-right: 10px;
 }
-
 .novosti h3 {
     color: darkcyan;
 }
-
 #main .header {
     color: cadetblue;
 }
-
 .vazno {
     font-weight: bold;
     font-size: 15px;
     color: darkblue;
 }
-
 .datum_objave {
     float: right;
     padding: 5px;
 }
-
 .kontaktforma {
     margin-left: 150px;
     padding: 5px;
 }
-
-.input1 {
+.kontaktforma p {
     margin-top: 0px;
 }
-
+.kontaktforma img {
+    width: 20px;
+    height: 20px;
+}
+.input1 {
+    padding: 0px;
+}
 .informacije {
     margin-left: 155px;
 }
-
 .informacije p {
     margin-bottom: 0px;
     color: black;
 }
-
 input {
     border-radius: 5px;
 }
-
 textarea {
     border-radius: 5px;
 }
-
-
-
-
-
-
 td {
     text-align: center
 }
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
     border: solid 1px;
-    
 }
-
-td, tr, th{
+td,
+tr,
+th {
     border: solid 1px black;
 }
-
-
-
 #main_kalendar {
     width: 700px;
     margin: auto;
-    
 }
-
 .tabela {
     margin-top: 20px;
 }
-
 .partneri {
     float: left;
     clear: none;
@@ -325,3 +318,28 @@ td, tr, th{
     background-color: lavender;
     margin-top: 20px;
 }
+#imeError {
+    visibility: hidden;
+}
+#prezimeError {
+    visibility: hidden;
+}
+#emailError {
+    visibility: hidden;
+}
+#porukaError {
+    visibility: hidden;
+}
+.sub_menu {
+    position: absolute;
+}
+
+
+#drop_down {
+    visibility: hidden;
+}
+#menu_lista ul li {
+    margin: 0px;
+}
+#menu_lista a {}
+

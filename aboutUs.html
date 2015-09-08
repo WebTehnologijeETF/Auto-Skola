@@ -18,17 +18,30 @@
         <!-- menu -->
         <div id="menu">
             <ul>
-                 <li><a href="index.html">Početna</a>
+                <li>
+                    <a href="index.html">Početna</a>
                 </li>
-                <li><a href="aboutUs.html">O nama</a>
+                <li>
+                    <a href="aboutUs.html">O nama</a>
                 </li>
-                <li><a href="kalendar.html">Kalendar</a>
+                <li>
+                    <a href="kalendar.html">Kalendar</a>
                 </li>
-                <li><a href="#">Obavještenja</a>
+                <li>
+                    <a href="#">Obavještenja</a>
                 </li>
-                <li><a href="novosti.html">Novosti</a>
+                <li>
+                    <a href="novosti.html">Novosti</a>
                 </li>
-                <li><a href="kontakt.html">Kontakt</a>
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+                <li onmouseover="showMenu();" onmouseout="hideMenu();"><a>Uputstva</a>
+                    <div id="drop_down">
+                        <a>Teorijski ispit</a>
+                        <a>Prakticni ispit</a>
+                        <a>Prva pomoc</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -71,7 +84,7 @@
 
         </div>
     </div>
-
+    <script src="showMenu.js" type="text/javascript"></script>
 </body>
 
 </html>
