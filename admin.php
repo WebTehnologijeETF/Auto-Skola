@@ -18,7 +18,7 @@
             <!-- menu -->
             <div id="menu">
                 <ul>
-                    <li>
+                   <li>
                         <a href="index.php">Početna</a>
                     </li>
                     <li>
@@ -28,10 +28,10 @@
                         <a onclick="fetchPage('kalendar.html')">Kalendar</a>
                     </li>
                     <li>
-                        <a href="novosti.php">Novosti</a>
+                        <a onclick="fetchPage('novosti.html'); dobaviNovosti();">Novosti</a>
                     </li>
                     <li>
-                        <a href="kontakt.php">Kontakt</a>
+                        <a onclick="fetchPage('kontakt.html')">Kontakt</a>
                     </li>
 
                     <li onmouseover="showMenu();" onmouseout="hideMenu();"><a>Uputstva</a>
@@ -105,9 +105,13 @@
                         </a>
                     </p>
 
-                    <script src="showMenu.js"></script>
-                    <script src="fetchPage.js"></script>
-                    <script src="prikaziKomentare.js"></script>
+                     <script src="validateForm.js" type="text/javascript"></script>
+                    <script src="showMenu.js" type="text/javascript"></script>
+                    <script src="fetchPage.js" type="text/javascript"></script>
+                    <script src="prikaziKomentare.js" type="text/javascript"></script>
+                    <script src="ServisValidacijaKontakta.js" type="text/javascript"></script>
+                    <script src="potvrda.js" type="text/javascript"></script>
+                    <script src="novosti.js" type="text/javascript"></script>
                 </div>
 
             </div>
